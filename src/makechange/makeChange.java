@@ -45,7 +45,10 @@ public class makeChange {
 			// This is going to be when a customer pays more than what the item costs
 			
 		else if ( payment > price ) {
-				
+			
+//			float exactChange;
+			int counter = 0;
+			
 			float change = (float) ( payment - price );
 				
 			System.out.println("\nChange due: " + "$" + (change));
@@ -53,24 +56,111 @@ public class makeChange {
 			// This is going to calculate what bills / coins are needed for change
 				
 			System.out.println("\nExact change: " );
+			
+			
+			
+//			while loop
+			
+			while (change >= 20) {
+				
+				change -= 20;
+				
+				counter++;
+				
+			}
+
+			System.out.println(counter + " Twenties ");
+			
+			counter = 0;
+				
+			while (change >= 10) { 
+			
+				change -= 10;
+
+				counter ++;
+						
+			}
+				
+			System.out.println( counter + " Tens");
+			
+			counter = 0;
+			
+			while (change >= 5) { 
+					
+				change -= 5;
+					
+				counter ++;
+					
+			}
+				
+			System.out.println( counter + " Fives");
+			
+			counter = 0;
+
+			while (change >= 1) { 
+				
+				change -= 1;
+				
+				counter ++;
+				
+			}
+			
+			System.out.println( counter + " Ones");
+			
+			counter = 0;
+		
+			while (change >= 0.25) { 
+			
+				change -= 0.25;
+			
+				counter ++;
+			
+			}
+		
+			System.out.println( counter + " Quarters");
+		
+			counter = 0;
+	
+			while (change >= 0.1) { 
+			
+				change -= 0.1;
+			
+				counter ++;
+			
+			}
+		
+			System.out.println( counter + " Dimes");
+		
+			counter = 0;
+			while (change >= 0.05) { 
+				
+				change -= 0.05;
+				
+				counter ++;
+				
+			}
+			
+			System.out.println( counter + " Nickels");
+			
+			counter = 0;
+			
+//			System.out.println(change);
+			
+			while (change >= 0.009) { 
+				
+				change -= 0.01;
+				
+				counter ++;
 				
 				
-				
-				
-				
+			}
+			
+			System.out.println( counter + " Pennies");
+			
+		
 		}
 		
 		kb.close();	
 	}
 
 }
-
-// bills and change initialized below
-//		double twenty = 20.00;
-//		double ten = 10.00;
-//		double five = 5.00;
-//		double one = 1.00;
-//		double quarter = 0.25;
-//		double dime = 0.10;
-//		double nickel = 0.05;
-//		double penny = 0.01;
